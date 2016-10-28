@@ -3,6 +3,10 @@ apply plugin: 'com.android.application'
 android {
   compileSdkVersion 24
   buildToolsVersion "24.0.2"
+  lintOptions {
+    checkReleaseBuilds true
+    abortOnError false
+  }
   defaultConfig {
     applicationId "com.insurancetelematics.team.projectl"
     minSdkVersion 19
