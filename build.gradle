@@ -16,6 +16,7 @@ buildscript {
 
 allprojects {
   apply plugin: "idea"
+  apply plugin: 'checkstyle'
 
   ext {
     gdxVersion = '1.5.5'
@@ -25,6 +26,15 @@ allprojects {
     jcenter()
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+  }
+
+  task checkstyle(type: Checkstyle) {
+    configFile file("${project.rootDir}/config/checkstyle/checkstyle.xml")
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    classpath = files()
   }
 }
 

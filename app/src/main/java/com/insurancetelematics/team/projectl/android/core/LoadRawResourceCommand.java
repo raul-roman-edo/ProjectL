@@ -1,8 +1,6 @@
 package com.insurancetelematics.team.projectl.android.core;
 
 import android.content.Context;
-import com.insurancetelematics.team.projectl.R;
-import com.insurancetelematics.team.projectl.android.core.ResourceUtils;
 
 public class LoadRawResourceCommand {
     private final Context context;
