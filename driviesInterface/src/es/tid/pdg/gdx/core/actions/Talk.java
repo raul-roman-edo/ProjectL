@@ -33,7 +33,7 @@ public class Talk {
             message.reset();
         }
         if (message.isFinished()) {
-            return obtainCurrentMessage(step+1, timeDelta);
+            return obtainCurrentMessage(step + 1, timeDelta);
         }
         return message.getText(timeDelta);
     }

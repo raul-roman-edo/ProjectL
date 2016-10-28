@@ -1,6 +1,5 @@
 package es.tid.pdg.gdx.core;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import es.tid.pdg.gdx.core.actor.Actor;
 import java.util.HashMap;

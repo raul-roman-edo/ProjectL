@@ -10,6 +10,7 @@ android {
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    resValue 'string', 'app_name', 'Project L'
   }
   buildTypes {
     release {
@@ -22,6 +23,12 @@ android {
     exclude 'META-INF/NOTICE'
     exclude 'META-INF/LICENSE'
   }
+  productFlavors {
+    dev {
+      resValue 'string', 'app_name', 'Project L (dev)'
+      applicationIdSuffix '.dev'
+    }
+  }
 }
 
 dependencies {
@@ -31,16 +38,8 @@ dependencies {
   compile "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
   compile project(':driviesInterface')
   testCompile 'junit:junit:4.12'
+  testCompile 'org.mockito:mockito-core:1.9.5'
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
-}
-
-task checkstyle(type: Checkstyle) {
-  configFile file('../config/checkstyle/checkstyle.xml')
-  source 'src'
-  include '**/*.java'
-  exclude '**/gen/**'
-
-  classpath = files()
 }
