@@ -1,0 +1,88 @@
+[
+  {
+    "actions": [
+      {
+        "actorId": "drivie-talking",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Esto es una prueba",
+              "duration": 0
+            }
+          ],
+          "actorMarginPercentage": 1.5
+        }
+      },
+      {
+        "actorId": "drivie",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0
+      }
+    ],
+    "duration": 5
+  },
+  {
+    "actions": [
+      {
+        "actorId": "drivie",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "drivie-talking",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Esto es una prueba",
+              "duration": 0
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      }
+    ],
+    "duration": 5
+  },
+  {
+    "actions": [
+      {
+        "actorId": "drivie",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0,
+        "translation": {
+          "moveToX": -1.5,
+          "moveToY": 0,
+          "duration": 4
+        }
+      },
+      {
+        "actorId": "drivie-talking",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Esto es una prueba",
+              "duration": 1
+            },
+            {
+              "text": "Así que no toques los huevos",
+              "duration": 3
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        },
+        "translation": {
+          "moveToX": -1.5,
+          "moveToY": 0,
+          "duration": 4
+        }
+      }
+    ],
+    "duration": 6
+  }
+]

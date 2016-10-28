@@ -1,0 +1,118 @@
+{
+  "atlasName": "characters.atlas",
+  "actors": {
+    "drivie-talking": {
+      "size": {
+        "width": 140,
+        "height": 227
+      },
+      "textColor": {
+        "red": 1,
+        "green": 1,
+        "blue": 1
+      },
+      "members": [
+        {
+          "xPercentage": 0,
+          "yPercentage": 0,
+          "imagesNames": [
+            "body_front"
+          ]
+        },
+        {
+          "xPercentage": -0.1643,
+          "yPercentage": 0.7489,
+          "imagesNames": [
+            "head"
+          ]
+        },
+        {
+          "xPercentage": -0.1643,
+          "yPercentage": 0.7801,
+          "animationDelta": 0.15,
+          "imagesNames": [
+            "eyeopen",
+            "eyeblink01",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen"
+          ]
+        },
+        {
+          "xPercentage": -0.1643,
+          "yPercentage": 0.6239,
+          "animationDelta": 0.20,
+          "imagesNames": [
+            "mouthTalking01",
+            "mouthTalking02",
+            "mouthTalking03",
+            "mouthTalking04"
+          ]
+        }
+      ]
+    },
+    "drivie": {
+      "size": {
+        "width": 140,
+        "height": 227
+      },
+      "textColor": {
+        "red": 1,
+        "green": 1,
+        "blue": 1
+      },
+      "members": [
+        {
+          "xPercentage": 0,
+          "yPercentage": 0,
+          "imagesNames": [
+            "body_front"
+          ]
+        },
+        {
+          "xPercentage": -0.1643,
+          "yPercentage": 0.7489,
+          "imagesNames": [
+            "head"
+          ]
+        },
+        {
+          "xPercentage": -0.1643,
+          "yPercentage": 0.7801,
+          "animationDelta": 0.15,
+          "imagesNames": [
+            "eyeopen",
+            "eyeblink01",
+            "eyeopen",
+            "eyeblink01",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen",
+            "eyeopen"
+          ]
+        },
+        {
+          "xPercentage": -0.1643,
+          "yPercentage": 0.6239,
+          "imagesNames": [
+            "mouth01"
+          ]
+        }
+      ]
+    }
+  }
+}
