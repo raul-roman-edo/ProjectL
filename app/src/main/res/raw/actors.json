@@ -1,69 +1,35 @@
 {
   "atlasName": "characters.atlas",
   "actors": {
-    "drivie-talking": {
-      "size": {
-        "width": 140,
-        "height": 227
-      },
+    "background": {
       "textColor": {
-        "red": 1,
-        "green": 1,
-        "blue": 1
+        "red": 0.5,
+        "green": 0.5,
+        "blue": 0.5
       },
       "members": [
         {
-          "xPercentage": 0,
-          "yPercentage": 0,
           "imagesNames": [
-            "body_front"
-          ]
-        },
-        {
-          "xPercentage": -0.1643,
-          "yPercentage": 0.7489,
-          "imagesNames": [
-            "head"
-          ]
-        },
-        {
-          "xPercentage": -0.1643,
-          "yPercentage": 0.7801,
-          "animationDelta": 0.15,
-          "imagesNames": [
-            "eyeopen",
-            "eyeblink01",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen"
-          ]
-        },
-        {
-          "xPercentage": -0.1643,
-          "yPercentage": 0.6239,
-          "animationDelta": 0.20,
-          "imagesNames": [
-            "mouthTalking01",
-            "mouthTalking02",
-            "mouthTalking03",
-            "mouthTalking04"
+            "blurred"
           ]
         }
       ]
     },
-    "drivie": {
-      "size": {
-        "width": 140,
-        "height": 227
-      },
+    "boss": {
+      "textColor": {
+        "red": 0.8,
+        "green": 0.5,
+        "blue": 0.5
+      }
+    },
+    "lor": {
+      "textColor": {
+        "red": 1,
+        "green": 1,
+        "blue": 1
+      }
+    },
+    "lor-awakens": {
       "textColor": {
         "red": 1,
         "green": 1,
@@ -73,43 +39,604 @@
         {
           "xPercentage": 0,
           "yPercentage": 0,
+          "animationDelta": 0.2,
+          "imagesNames": [
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid1",
+            "eyes_mid2",
+            "eyes_mid2",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed",
+            "eyes_closed"
+          ]
+        }
+      ]
+    },
+    "c1-talking": {
+      "size": {
+        "width": 140,
+        "height": 227
+      },
+      "textColor": {
+        "red": 0.5,
+        "green": 0.5,
+        "blue": 0.8
+      },
+      "members": [
+        {
+          "xPercentage": 0,
+          "yPercentage": -0.2026,
           "imagesNames": [
             "body_front"
           ]
         },
         {
-          "xPercentage": -0.1643,
-          "yPercentage": 0.7489,
+          "xPercentage": -0.1286,
+          "yPercentage": 0.7709,
           "imagesNames": [
-            "head"
+            "c1_head"
+          ],
+          "members": [
+            {
+              "xPercentage": 0,
+              "yPercentage": 0.05,
+              "animationDelta": 0.15,
+              "imagesNames": [
+                "c1_eyes_open",
+                "c1_eyes_blink",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open"
+              ]
+            },
+            {
+              "xPercentage": -0.0167,
+              "yPercentage": -0.75,
+              "animationDelta": 0.20,
+              "imagesNames": [
+                "c1_mouth0",
+                "c1_mouth1",
+                "c1_mouth0",
+                "c1_mouth2"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "c1": {
+      "size": {
+        "width": 140,
+        "height": 227
+      },
+      "members": [
+        {
+          "xPercentage": 0,
+          "yPercentage": -0.2026,
+          "imagesNames": [
+            "body_front"
           ]
         },
         {
-          "xPercentage": -0.1643,
-          "yPercentage": 0.7801,
+          "xPercentage": -0.1286,
+          "yPercentage": 0.7709,
+          "imagesNames": [
+            "c1_head"
+          ],
+          "members": [
+            {
+              "xPercentage": 0,
+              "yPercentage": 0.05,
+              "animationDelta": 0.15,
+              "imagesNames": [
+                "c1_eyes_open",
+                "c1_eyes_blink",
+                "c1_eyes_open",
+                "c1_eyes_blink",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open",
+                "c1_eyes_open"
+              ]
+            },
+            {
+              "xPercentage": -0.0167,
+              "yPercentage": -0.75,
+              "imagesNames": [
+                "c1_mouth0"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "c1-runaway": {
+      "size": {
+        "width": 140,
+        "height": 227
+      },
+      "textColor": {
+        "red": 0.5,
+        "green": 0.5,
+        "blue": 0.5
+      },
+      "members": [
+        {
+          "xPercentage": 0,
+          "yPercentage": -0.2026,
           "animationDelta": 0.15,
           "imagesNames": [
-            "eyeopen",
-            "eyeblink01",
-            "eyeopen",
-            "eyeblink01",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen",
-            "eyeopen"
+            "walk0",
+            "walk1",
+            "walk2",
+            "walk3",
+            "walk4",
+            "walk5"
           ]
         },
         {
-          "xPercentage": -0.1643,
-          "yPercentage": 0.6239,
+          "xPercentage": -0.1286,
+          "yPercentage": 0.7709,
           "imagesNames": [
-            "mouth01"
+            "c1_head"
+          ],
+          "members": [
+            {
+              "xPercentage": 0,
+              "yPercentage": 0.05,
+              "imagesNames": [
+                "c1_eyes_open"
+              ]
+            },
+            {
+              "xPercentage": -0.0167,
+              "yPercentage": -0.75,
+              "imagesNames": [
+                "c1_mouth2"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "c2-talking": {
+      "size": {
+        "width": 140,
+        "height": 227
+      },
+      "textColor": {
+        "red": 0.8,
+        "green": 0.8,
+        "blue": 0.5
+      },
+      "members": [
+        {
+          "xPercentage": 0,
+          "yPercentage": -0.2026,
+          "tint": {
+            "red": 1,
+            "green": 1,
+            "blue": 0
+          },
+          "imagesNames": [
+            "body_front"
+          ]
+        },
+        {
+          "xPercentage": -0.1286,
+          "yPercentage": 0.7709,
+          "imagesNames": [
+            "c2_head"
+          ],
+          "members": [
+            {
+              "xPercentage": 0.0667,
+              "yPercentage": 0.0333,
+              "animationDelta": 0.15,
+              "imagesNames": [
+                "c2_eyes_open",
+                "c2_eyes_blink",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open"
+              ]
+            },
+            {
+              "xPercentage": -0.0333,
+              "yPercentage": -0.7667,
+              "animationDelta": 0.20,
+              "imagesNames": [
+                "c2_mouth0",
+                "c2_mouth1",
+                "c2_mouth0",
+                "c2_mouth2"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "c2": {
+      "size": {
+        "width": 140,
+        "height": 227
+      },
+      "members": [
+        {
+          "xPercentage": 0,
+          "yPercentage": -0.2026,
+          "tint": {
+            "red": 1,
+            "green": 1,
+            "blue": 0
+          },
+          "imagesNames": [
+            "body_front"
+          ]
+        },
+        {
+          "xPercentage": -0.1286,
+          "yPercentage": 0.7709,
+          "imagesNames": [
+            "c2_head"
+          ],
+          "members": [
+            {
+              "xPercentage": 0.0667,
+              "yPercentage": 0.0333,
+              "animationDelta": 0.15,
+              "imagesNames": [
+                "c2_eyes_open",
+                "c2_eyes_blink",
+                "c2_eyes_open",
+                "c2_eyes_blink",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open",
+                "c2_eyes_open"
+              ]
+            },
+            {
+              "xPercentage": -0.0333,
+              "yPercentage": -0.7667,
+              "imagesNames": [
+                "c2_mouth0"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "c2-runaway": {
+      "size": {
+        "width": 140,
+        "height": 227
+      },
+      "textColor": {
+        "red": 0.8,
+        "green": 0.8,
+        "blue": 0.5
+      },
+      "members": [
+        {
+          "xPercentage": 0,
+          "yPercentage": -0.2026,
+          "tint": {
+            "red": 1,
+            "green": 1,
+            "blue": 0
+          },
+          "animationDelta": 0.15,
+          "imagesNames": [
+            "walk0",
+            "walk1",
+            "walk2",
+            "walk3",
+            "walk4",
+            "walk5"
+          ]
+        },
+        {
+          "xPercentage": -0.1286,
+          "yPercentage": 0.7709,
+          "flip": true,
+          "imagesNames": [
+            "c2_head"
+          ],
+          "members": [
+            {
+              "xPercentage": -0.0667,
+              "yPercentage": 0.0333,
+              "flip": true,
+              "imagesNames": [
+                "c2_eyes_open"
+              ]
+            },
+            {
+              "xPercentage": 0.0333,
+              "yPercentage": -0.7667,
+              "flip": true,
+              "imagesNames": [
+                "c2_mouth2"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "c3-talking": {
+      "size": {
+        "width": 140,
+        "height": 227
+      },
+      "textColor": {
+        "red": 0.8,
+        "green": 0.5,
+        "blue": 0.8
+      },
+      "members": [
+        {
+          "xPercentage": 0,
+          "yPercentage": -0.2026,
+          "flip": true,
+          "tint": {
+            "red": 1,
+            "green": 0,
+            "blue": 1
+          },
+          "imagesNames": [
+            "body_front"
+          ]
+        },
+        {
+          "xPercentage": 0.1429,
+          "yPercentage": 0.7533,
+          "imagesNames": [
+            "c3_head"
+          ],
+          "members": [
+            {
+              "xPercentage": -0.2333,
+              "yPercentage": 0,
+              "animationDelta": 0.2,
+              "imagesNames": [
+                "c3_eyes_open",
+                "c3_eyes_blink",
+                "c3_eyes_open",
+                "c3_eyes_open",
+                "c3_eyes_open",
+                "c3_eyes_open",
+                "c3_eyes_open",
+                "c3_eyes_open"
+              ]
+            },
+            {
+              "xPercentage": -0.0333,
+              "yPercentage": -0.7167,
+              "animationDelta": 0.20,
+              "imagesNames": [
+                "c3_mouth0",
+                "c3_mouth1",
+                "c3_mouth0",
+                "c3_mouth2"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "c3": {
+      "size": {
+        "width": 140,
+        "height": 227
+      },
+      "members": [
+        {
+          "xPercentage": 0,
+          "yPercentage": -0.2026,
+          "flip": true,
+          "tint": {
+            "red": 1,
+            "green": 0,
+            "blue": 1
+          },
+          "imagesNames": [
+            "body_front"
+          ]
+        },
+        {
+          "xPercentage": 0.1429,
+          "yPercentage": 0.7533,
+          "imagesNames": [
+            "c3_head"
+          ],
+          "members": [
+            {
+              "xPercentage": -0.2333,
+              "yPercentage": 0,
+              "animationDelta": 0.2,
+              "imagesNames": [
+                "c3_eyes_open",
+                "c3_eyes_blink",
+                "c3_eyes_open",
+                "c3_eyes_blink",
+                "c3_eyes_open",
+                "c3_eyes_open",
+                "c3_eyes_open"
+              ]
+            },
+            {
+              "xPercentage": -0.0333,
+              "yPercentage": -0.7167,
+              "imagesNames": [
+                "c3_mouth0"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "c3-runaway": {
+      "size": {
+        "width": 140,
+        "height": 227
+      },
+      "textColor": {
+        "red": 0.8,
+        "green": 0.5,
+        "blue": 0.8
+      },
+      "members": [
+        {
+          "xPercentage": 0,
+          "yPercentage": -0.2026,
+          "tint": {
+            "red": 1,
+            "green": 0,
+            "blue": 1
+          },
+          "animationDelta": 0.15,
+          "imagesNames": [
+            "walk0",
+            "walk1",
+            "walk2",
+            "walk3",
+            "walk4",
+            "walk5"
+          ]
+        },
+        {
+          "xPercentage": -0.1286,
+          "yPercentage": 0.7533,
+          "imagesNames": [
+            "c3_head"
+          ],
+          "members": [
+            {
+              "xPercentage": -0.2333,
+              "yPercentage": 0,
+              "imagesNames": [
+                "c3_eyes_open"
+              ]
+            },
+            {
+              "xPercentage": -0.0333,
+              "yPercentage": -0.7167,
+              "imagesNames": [
+                "c3_mouth2"
+              ]
+            }
           ]
         }
       ]

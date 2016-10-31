@@ -14,9 +14,9 @@ public class MainGDX extends ApplicationAdapter implements MainGDXView {
     private static final String JSON_TEMPLATE = "{\"dressingRoom\":%1$s,\"actions\":%2$s}";
     private static final String TAG = MainGDX.class.getName();
     private static final String NAME = MainGDX.class.getSimpleName();
-    private static final float BACKGROUND_RED = 0.0f;
-    private static final float BACKGROUND_GREEN = 0.0f;
-    private static final float BACKGROUND_BLUE = 0.0f;
+    private static final float BACKGROUND_RED = 0.2f;
+    private static final float BACKGROUND_GREEN = 0.2f;
+    private static final float BACKGROUND_BLUE = 0.2f;
     private static final int BACKGROUND_ALPHA = 1;
     private Coordinator coordinator = null;
     private Size screenSize;
@@ -48,7 +48,7 @@ public class MainGDX extends ApplicationAdapter implements MainGDXView {
         screenSize.setHeight(Gdx.graphics.getHeight());
         batch = new SpriteBatch();
         font = new BitmapFont();
-        font.setScale(Gdx.graphics.getDensity());
+        font.setScale(1.5f * Gdx.graphics.getDensity());
         atlas = new TextureAtlas(Gdx.files.internal("characters.atlas"));
         camera = new OrthographicCamera(screenSize.getWidth(), screenSize.getHeight());
         synchronized (lock) {
@@ -101,7 +101,8 @@ public class MainGDX extends ApplicationAdapter implements MainGDXView {
         batch.setProjectionMatrix(camera.combined);
         if (coordinator == null || !coordinator.isReady()) return;
         batch.begin();
-        coordinator.render(batch, font, screenSize, Gdx.graphics.getDeltaTime());
+        float scale = Gdx.graphics.getDensity();
+        coordinator.render(batch, font, screenSize, scale, Gdx.graphics.getDeltaTime());
         batch.end();
     }
 }

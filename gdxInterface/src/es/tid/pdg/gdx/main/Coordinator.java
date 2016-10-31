@@ -3,13 +3,13 @@ package es.tid.pdg.gdx.main;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import es.tid.pdg.gdx.core.actions.Action;
-import es.tid.pdg.gdx.core.actions.ActionGroup;
-import es.tid.pdg.gdx.core.actor.Actor;
 import es.tid.pdg.gdx.core.DressingRoom;
 import es.tid.pdg.gdx.core.Size;
+import es.tid.pdg.gdx.core.actions.Action;
+import es.tid.pdg.gdx.core.actions.ActionGroup;
 import es.tid.pdg.gdx.core.actions.Talk;
 import es.tid.pdg.gdx.core.actions.Translation;
+import es.tid.pdg.gdx.core.actor.Actor;
 import java.util.ArrayList;
 
 public class Coordinator {
@@ -26,14 +26,14 @@ public class Coordinator {
         isReady = true;
     }
 
-    public void render(SpriteBatch batch, BitmapFont font, Size screenSize, float deltaTime) {
+    public void render(SpriteBatch batch, BitmapFont font, Size screenSize, float scale, float deltaTime) {
         if (stop) return;
         int lastGroupPosition = actions.size() - 1;
         boolean isFinished = step > lastGroupPosition;
         if (isFinished) {
             doFinishedFlow();
         } else {
-            doNormalFlow(batch, font, screenSize, deltaTime);
+            doNormalFlow(batch, font, screenSize, scale, deltaTime);
         }
     }
 
@@ -46,34 +46,34 @@ public class Coordinator {
         view.close();
     }
 
-    private void doNormalFlow(SpriteBatch batch, BitmapFont font, Size screenSize, float deltaTime) {
+    private void doNormalFlow(SpriteBatch batch, BitmapFont font, Size screenSize, float scale, float deltaTime) {
         ActionGroup actionGroup = actions.get(step);
         if (actionGroup.isFinished()) {
-            playNextGroup(batch, font, screenSize, deltaTime);
+            playNextGroup(batch, font, screenSize, scale, deltaTime);
         } else {
-            playActions(batch, font, screenSize, deltaTime, actionGroup);
+            playActions(batch, font, screenSize, scale, deltaTime, actionGroup);
         }
     }
 
-    private void playNextGroup(SpriteBatch batch, BitmapFont font, Size screenSize, float deltaTime) {
+    private void playNextGroup(SpriteBatch batch, BitmapFont font, Size screenSize, float scale, float deltaTime) {
         step++;
-        render(batch, font, screenSize, deltaTime);
+        render(batch, font, screenSize, scale, deltaTime);
     }
 
-    private void playActions(SpriteBatch batch, BitmapFont font, Size screenSize, float deltaTime,
+    private void playActions(SpriteBatch batch, BitmapFont font, Size screenSize, float scale, float deltaTime,
             ActionGroup actionGroup) {
         boolean isInitial = actionGroup.isInitial();
         actionGroup.addProgress(deltaTime);
         for (Action action : actionGroup.getActions()) {
-            performAction(batch, font, screenSize, deltaTime, isInitial, action);
+            performAction(batch, font, screenSize, scale, deltaTime, isInitial, action);
         }
     }
 
-    private void performAction(SpriteBatch batch, BitmapFont font, Size screenSize, float deltaTime, boolean isInitial,
-            Action action) {
+    private void performAction(SpriteBatch batch, BitmapFont font, Size screenSize, float scale, float deltaTime,
+            boolean isInitial, Action action) {
         float[] position = calculateCurrentPosition(deltaTime, isInitial, action);
         Actor actor = dressingRoom.obtainActor(action.getActorId());
-        drawActor(batch, font, actor, position, screenSize, isInitial, deltaTime, action.getTalk());
+        drawActor(batch, font, actor, position, screenSize, scale, isInitial, deltaTime, action.getTalk());
     }
 
     private float[] calculateCurrentPosition(float deltaTime, boolean isInitial, Action action) {
@@ -90,7 +90,7 @@ public class Coordinator {
     }
 
     private void drawActor(SpriteBatch batch, BitmapFont font, Actor actor, float[] position, Size screenSize,
-            boolean isInitial, float deltaTime, Talk talk) {
+            float scale, boolean isInitial, float deltaTime, Talk talk) {
         if (isInitial) {
             actor.reset();
             if (talk != null) {
@@ -99,7 +99,7 @@ public class Coordinator {
         }
         float actorPositionX = position[0] * screenSize.getWidth() / 2;
         float actorPositionY = position[1] * screenSize.getHeight() / 2;
-        actor.renderBody(batch, actorPositionX, actorPositionY, deltaTime);
-        actor.talk(batch, font, actorPositionX, actorPositionY, screenSize, talk, deltaTime);
+        actor.renderBody(batch, actorPositionX, actorPositionY, scale, deltaTime);
+        actor.talk(batch, font, actorPositionX, actorPositionY, screenSize, talk, scale, deltaTime);
     }
 }
