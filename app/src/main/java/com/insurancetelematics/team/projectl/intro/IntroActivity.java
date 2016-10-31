@@ -12,13 +12,19 @@ import com.insurancetelematics.team.projectl.main.MainPage;
 
 public class IntroActivity extends AndroidApplication implements IntroView {
     private IntroPresenter presenter;
+    private FrameLayout frame;
+
+    @Override
+    public void addLayers() {
+        ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT);
+        frame = new FrameLayout(this);
+        frame.setKeepScreenOn(true);
+        addContentView(frame, params);
+    }
 
     @Override
     public void allowSkip() {
-        ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.MATCH_PARENT);
-        View frame = new FrameLayout(this);
-        addContentView(frame, params);
         frame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

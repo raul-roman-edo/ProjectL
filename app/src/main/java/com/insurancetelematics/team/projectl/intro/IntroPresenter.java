@@ -47,6 +47,7 @@ public class IntroPresenter {
         AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
         app = new MainGDX();
         view.initialize(app, config);
+        view.addLayers();
         configureSkip();
         introDataLoader.setOnLoadFinishedListener(onDataLoaded);
         introDataLoader.run(null);
