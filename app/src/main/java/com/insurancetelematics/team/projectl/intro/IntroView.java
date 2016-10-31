@@ -6,5 +6,7 @@ import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 public interface IntroView {
     void initialize(ApplicationListener app, AndroidApplicationConfiguration config);
 
+    void allowSkip();
+
     void close();
 }
