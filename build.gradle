@@ -16,7 +16,6 @@ buildscript {
 
 allprojects {
   apply plugin: "idea"
-  apply plugin: 'checkstyle'
 
   ext {
     gdxVersion = '1.5.5'
