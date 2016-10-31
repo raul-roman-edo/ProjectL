@@ -2,21 +2,79 @@
   {
     "actions": [
       {
-        "actorId": "drivie-talking",
-        "xScreenPercentage": -0.5,
+        "actorId": "background",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "lor-awakens",
+        "xScreenPercentage": 0,
         "yScreenPercentage": 0,
         "talk": {
           "messages": [
             {
-              "text": "Esto es una prueba",
-              "duration": 0
+              "text": "Uffff, qué dolor de almendra",
+              "duration": 3
+            },
+            {
+              "text": "El cocido de la Hacienda de ayer\nno ha debido sentarme bien",
+              "duration": 4
+            },
+            {
+              "text": "Un momento",
+              "duration": 2
+            },
+            {
+              "text": "¿Dónde cojones estoy?",
+              "duration": 3
+            },
+            {
+              "text": "¿Quiénes son esos duendecillos?",
+              "duration": 3
+            },
+            {
+              "text": "¡No me jodas que he palmado!",
+              "duration": 3
+            },
+            {
+              "text": "Precisamente ahora",
+              "duration": 3
+            },
+            {
+              "text": "En la flor de mi vida",
+              "duration": 3
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      }
+    ],
+    "duration": 25
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1-talking",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "¡Buenos días Lor!",
+              "offset": 1,
+              "duration": 4
             }
           ],
           "actorMarginPercentage": 1.5
         }
       },
       {
-        "actorId": "drivie",
+        "actorId": "c2",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c3",
         "xScreenPercentage": 0.5,
         "yScreenPercentage": 0
       }
@@ -26,19 +84,158 @@
   {
     "actions": [
       {
-        "actorId": "drivie",
+        "actorId": "c1",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c2-talking",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "No, no estás muerto",
+              "duration": 3
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      },
+      {
+        "actorId": "c3",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0
+      }
+    ],
+    "duration": 4
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c2",
         "xScreenPercentage": -0.5,
         "yScreenPercentage": 0
       },
       {
-        "actorId": "drivie-talking",
+        "actorId": "c3-talking",
         "xScreenPercentage": 0.5,
         "yScreenPercentage": 0,
         "talk": {
           "messages": [
             {
-              "text": "Esto es una prueba",
-              "duration": 0
+              "text": "Estás en...",
+              "duration": 3
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      }
+    ],
+    "duration": 4
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1-talking",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "El Limbo de los Jubiletas(TM)",
+              "duration": 5
+            }
+          ],
+          "actorMarginPercentage": 1.5
+        }
+      },
+      {
+        "actorId": "c2-talking",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "El Limbo de los Jubiletas(TM)",
+              "duration": 5
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      },
+      {
+        "actorId": "c3-talking",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "El Limbo de los Jubiletas(TM)",
+              "duration": 5
+            }
+          ],
+          "actorMarginPercentage": -2
+        }
+      }
+    ],
+    "duration": 6
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1-talking",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Wahahahahahaha!",
+              "duration": 3
+            }
+          ],
+          "actorMarginPercentage": 1.5
+        }
+      },
+      {
+        "actorId": "c2",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c3",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0
+      }
+    ],
+    "duration": 4
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c2",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c3-talking",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "De aquí a que te jubiles",
+              "duration": 4
             }
           ],
           "actorMarginPercentage": -1.5
@@ -50,9 +247,316 @@
   {
     "actions": [
       {
-        "actorId": "drivie",
+        "actorId": "c1",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c2",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c3-talking",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "No dejaremos que\nsalgas de aquí",
+              "duration": 4
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      }
+    ],
+    "duration": 5
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1-talking",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Tendrás reuniones sin parar",
+              "duration": 4
+            }
+          ],
+          "actorMarginPercentage": 1.5
+        }
+      },
+      {
+        "actorId": "c2",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c3",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0
+      }
+    ],
+    "duration": 5
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c2-talking",
         "xScreenPercentage": -0.5,
         "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "No tendrás tiempo\npara programar",
+              "duration": 4
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      },
+      {
+        "actorId": "c3",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0
+      }
+    ],
+    "duration": 5
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c2",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c3-talking",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Y cuando lo tengas te\nfreiremos a reviews de 24h",
+              "duration": 5
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      }
+    ],
+    "duration": 6
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1-talking",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Y te haremos pasar el\ncheckstyle compulsivamente",
+              "duration": 5
+            }
+          ],
+          "actorMarginPercentage": 1.5
+        }
+      },
+      {
+        "actorId": "c2",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c3",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0
+      }
+    ],
+    "duration": 6
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c2-talking",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Te prohibiremos los ternarios",
+              "duration": 4
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      },
+      {
+        "actorId": "c3",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0
+      }
+    ],
+    "duration": 5
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c2",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c3-talking",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Y te daremos desayunos\nenergía con salchichas\nde pavo",
+              "duration": 6
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      }
+    ],
+    "duration": 7
+  },
+  {
+    "actions": [
+      {
+        "actorId": "c1-talking",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "WAHAHAHAHAHAHAHAAA!!",
+              "duration": 4
+            }
+          ],
+          "actorMarginPercentage": 1.5
+        }
+      },
+      {
+        "actorId": "c2-talking",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "WAHAHAHAHAHAHAHAAA!!",
+              "duration": 4
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      },
+      {
+        "actorId": "c3-talking",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "WAHAHAHAHAHAHAHAAA!!",
+              "duration": 4
+            }
+          ],
+          "actorMarginPercentage": -2
+        }
+      }
+    ],
+    "duration": 5
+  },
+  {
+    "actions": [
+      {
+        "actorId": "boss",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "¡¡¡¿Pero que cojones?!!!",
+              "duration": 0
+            }
+          ],
+          "actorMarginPercentage": 1.5
+        }
+      },
+      {
+        "actorId": "c1",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c2",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0
+      },
+      {
+        "actorId": "c3",
+        "xScreenPercentage": 0.5,
+        "yScreenPercentage": 0
+      }
+    ],
+    "duration": 4
+  },
+  {
+    "actions": [
+      {
+        "actorId": "boss",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "¡¡¡Vamos!!! ¡¡¡A producir!!!",
+              "duration": 0
+            }
+          ],
+          "actorMarginPercentage": 1.5
+        }
+      },
+      {
+        "actorId": "c1-runaway",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Aaaaargh!!!",
+              "duration": 4
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        },
         "translation": {
           "moveToX": -1.5,
           "moveToY": 0,
@@ -60,18 +564,33 @@
         }
       },
       {
-        "actorId": "drivie-talking",
+        "actorId": "c2-runaway",
+        "xScreenPercentage": -0.5,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Aaaaargh!!!",
+              "duration": 4
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        },
+        "translation": {
+          "moveToX": -1.5,
+          "moveToY": 0,
+          "duration": 4
+        }
+      },
+      {
+        "actorId": "c3-runaway",
         "xScreenPercentage": 0.5,
         "yScreenPercentage": 0,
         "talk": {
           "messages": [
             {
-              "text": "Esto es una prueba",
-              "duration": 1
-            },
-            {
-              "text": "Así que no toques los huevos",
-              "duration": 3
+              "text": "Aaaaargh!!!",
+              "duration": 4
             }
           ],
           "actorMarginPercentage": -1.5
@@ -84,5 +603,30 @@
       }
     ],
     "duration": 6
+  },
+  {
+    "actions": [
+      {
+        "actorId": "lor",
+        "xScreenPercentage": 0,
+        "yScreenPercentage": 0,
+        "talk": {
+          "messages": [
+            {
+              "text": "Pringaos",
+              "offset": 4,
+              "duration": 2
+            },
+            {
+              "text": "Me voy a ver obras",
+              "offset": 3,
+              "duration": 4
+            }
+          ],
+          "actorMarginPercentage": -1.5
+        }
+      }
+    ],
+    "duration": 14
   }
 ]
