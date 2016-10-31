@@ -1,6 +1,9 @@
 package com.insurancetelematics.team.projectl.intro;
 
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.insurancetelematics.team.projectl.R;
 import com.insurancetelematics.team.projectl.android.core.LoadRawResourceCommand;
@@ -9,6 +12,20 @@ import com.insurancetelematics.team.projectl.main.MainPage;
 
 public class IntroActivity extends AndroidApplication implements IntroView {
     private IntroPresenter presenter;
+
+    @Override
+    public void allowSkip() {
+        ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT);
+        View frame = new FrameLayout(this);
+        addContentView(frame, params);
+        frame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.onSkipPressed();
+            }
+        });
+    }
 
     @Override
     public void close() {
@@ -23,11 +40,12 @@ public class IntroActivity extends AndroidApplication implements IntroView {
     }
 
     private void createPresenter() {
+        FirstTimeStore firstTimeStore = new FirstTimeStore(getApplicationContext());
         LoadRawResourceCommand loadActorsCommand = new LoadRawResourceCommand(getApplicationContext(), R.raw.actors);
         LoadRawResourceCommand loadActionsCommand = new LoadRawResourceCommand(getApplicationContext(), R.raw.actions);
         IntroDataLoader introDataLoader =
                 new IntroDataLoader(ThreadExecutor.getInstance(), loadActorsCommand, loadActionsCommand);
         MainPage mainPage = new MainPage(this);
-        presenter = new IntroPresenter(this, ThreadExecutor.getInstance(), introDataLoader, mainPage);
+        presenter = new IntroPresenter(this, ThreadExecutor.getInstance(), firstTimeStore, introDataLoader, mainPage);
     }
 }
