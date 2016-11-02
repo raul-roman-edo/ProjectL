@@ -2,7 +2,6 @@ package com.insurancetelematics.team.projectl.intro;
 
 import com.insurancetelematics.team.projectl.android.core.LoadRawResourceCommand;
 import com.insurancetelematics.team.projectl.core.AsyncAction;
-import com.insurancetelematics.team.projectl.core.AsyncActionListener;
 import com.insurancetelematics.team.projectl.core.ThreadExecutor;
 
 public class IntroDataLoader extends AsyncAction<Void, Intro> {
@@ -10,11 +9,6 @@ public class IntroDataLoader extends AsyncAction<Void, Intro> {
     private static final String EMPTY_OBJECT = "{}";
     private final LoadRawResourceCommand loadActorsCommand;
     private final LoadRawResourceCommand loadActionsCommand;
-    private AsyncActionListener<Intro> onLoadFinishedListener;
-
-    public void setOnLoadFinishedListener(AsyncActionListener<Intro> onLoadFinishedListener) {
-        this.onLoadFinishedListener = onLoadFinishedListener;
-    }
 
     protected IntroDataLoader(ThreadExecutor executor, LoadRawResourceCommand loadActorsCommand,
             LoadRawResourceCommand loadActionsCommand) {
@@ -46,12 +40,5 @@ public class IntroDataLoader extends AsyncAction<Void, Intro> {
             actors = EMPTY_OBJECT;
         }
         intro.setRawActorsJson(actors);
-    }
-
-    @Override
-    protected void postExecution(Intro result) {
-        if (onLoadFinishedListener != null) {
-            onLoadFinishedListener.onFinished(result);
-        }
     }
 }

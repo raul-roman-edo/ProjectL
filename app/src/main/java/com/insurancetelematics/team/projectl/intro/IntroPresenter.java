@@ -1,7 +1,7 @@
 package com.insurancetelematics.team.projectl.intro;
 
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.insurancetelematics.team.projectl.core.AsyncActionListener;
+import com.insurancetelematics.team.projectl.core.Dispatcher;
 import com.insurancetelematics.team.projectl.core.ThreadExecutor;
 import com.insurancetelematics.team.projectl.main.MainPage;
 import es.tid.pdg.gdx.main.MainGDX;
@@ -15,13 +15,13 @@ public class IntroPresenter {
     private final MainPage mainPage;
     private MainGDX app;
 
-    private AsyncActionListener<Intro> onDataLoaded = new AsyncActionListener<Intro>() {
+    private Dispatcher<Intro> dispatcher = new Dispatcher<Intro>() {
         @Override
-        public void onFinished(final Intro result) {
+        public void dispatch(final Intro intro) {
             executor.runTask(new Runnable() {
                 @Override
                 public void run() {
-                    app.configure(result.getRawActorsJson(), result.getRawActionsJson(), actionsListener);
+                    app.configure(intro.getRawActorsJson(), intro.getRawActionsJson(), actionsListener);
                 }
             });
         }
@@ -49,8 +49,7 @@ public class IntroPresenter {
         view.initialize(app, config);
         view.addLayers();
         configureSkip();
-        introDataLoader.setOnLoadFinishedListener(onDataLoaded);
-        introDataLoader.run(null);
+        introDataLoader.run(dispatcher);
     }
 
     public void onSkipPressed() {
