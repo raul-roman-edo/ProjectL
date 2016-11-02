@@ -9,17 +9,23 @@ public abstract class AsyncAction<Param, Return> {
         this.executor = executor;
     }
 
-    public void run(Param param) {
-        Runnable action = createAction(param);
+    public void run(Dispatcher<Return> dispatcher) {
+        run(null, dispatcher);
+    }
+
+    public void run(Param param, Dispatcher<Return> dispatcher) {
+        Runnable action = createAction(param, dispatcher);
 
         executor.runTask(action);
     }
 
     protected abstract Return parallelExecution(Param param);
 
-    protected abstract void postExecution(Return result);
+    protected void postExecution(Return result, Dispatcher<Return> dispatcher) {
+        dispatcher.dispatch(result);
+    }
 
-    private Runnable createAction(final Param param) {
+    private Runnable createAction(final Param param, final Dispatcher<Return> dispatcher) {
         StoppableRunnable runnable = new StoppableRunnable() {
             private Return result;
 
@@ -30,7 +36,7 @@ public abstract class AsyncAction<Param, Return> {
 
             @Override
             protected void doPostExecute() {
-                postExecution(result);
+                postExecution(result, dispatcher);
             }
         };
 
