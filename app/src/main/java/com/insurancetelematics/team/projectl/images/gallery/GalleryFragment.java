@@ -73,7 +73,7 @@ public class GalleryFragment extends CardsFragment<GalleryPresenter> implements 
 
     @Override
     public void showMessage(String message) {
-        Snackbar.make(coordinator, message, Snackbar.LENGTH_SHORT);
+        Snackbar.make(coordinator, message, Snackbar.LENGTH_SHORT).show();
     }
 
     @Override

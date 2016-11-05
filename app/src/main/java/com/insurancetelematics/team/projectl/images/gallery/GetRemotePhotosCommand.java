@@ -3,6 +3,7 @@ package com.insurancetelematics.team.projectl.images.gallery;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.insurancetelematics.team.projectl.BuildConfig;
+import com.insurancetelematics.team.projectl.core.BaseApiResponse;
 import com.insurancetelematics.team.projectl.core.BaseHTTPResponse;
 import com.insurancetelematics.team.projectl.core.NetworkUtils;
 import com.insurancetelematics.team.projectl.images.gallery.cards.photos.Photo;
@@ -20,8 +21,8 @@ public class GetRemotePhotosCommand {
         this.network = network;
     }
 
-    public PhotosResponse request() {
-        PhotosResponse apiResponse = new PhotosResponse();
+    public BaseApiResponse<List<Photo>> request() {
+        BaseApiResponse<List<Photo>> apiResponse = new BaseApiResponse<>();
         try {
             BaseHTTPResponse response = network.simpleGetRequest(new URL(URL), USER_AGENT);
             Gson gson = new Gson();
@@ -33,7 +34,7 @@ public class GetRemotePhotosCommand {
             }
             List<Photo> photos = gson.fromJson(rawBody, listType);
             apiResponse.setCode(response.code());
-            apiResponse.setPhotos(photos);
+            apiResponse.setPayload(photos);
         } catch (MalformedURLException ignore) {
         }
 
