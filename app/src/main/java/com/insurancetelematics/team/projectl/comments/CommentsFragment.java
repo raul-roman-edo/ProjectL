@@ -26,7 +26,6 @@ import com.insurancetelematics.team.projectl.comments.cards.comments.CommentHold
 import com.insurancetelematics.team.projectl.core.ListLoadingUseCase;
 import com.insurancetelematics.team.projectl.core.NetworkUtils;
 import com.insurancetelematics.team.projectl.core.ThreadExecutor;
-import com.insurancetelematics.team.projectl.images.gallery.cards.photos.Photo;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.List;
