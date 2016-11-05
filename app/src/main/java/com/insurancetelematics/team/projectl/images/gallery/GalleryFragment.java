@@ -13,17 +13,22 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.google.gson.reflect.TypeToken;
+import com.insurancetelematics.team.projectl.BuildConfig;
 import com.insurancetelematics.team.projectl.R;
 import com.insurancetelematics.team.projectl.android.core.cards.CardViewHolder;
 import com.insurancetelematics.team.projectl.android.core.cards.CardViewHolderCreator;
 import com.insurancetelematics.team.projectl.android.core.cards.CardsFragment;
 import com.insurancetelematics.team.projectl.android.core.cards.OnCardRemoved;
 import com.insurancetelematics.team.projectl.android.core.cards.RecyclerViewCardsAdapter;
+import com.insurancetelematics.team.projectl.core.ListLoadingUseCase;
 import com.insurancetelematics.team.projectl.core.NetworkUtils;
 import com.insurancetelematics.team.projectl.core.ThreadExecutor;
 import com.insurancetelematics.team.projectl.images.gallery.cards.photos.Photo;
 import com.insurancetelematics.team.projectl.images.gallery.cards.photos.PhotoHolder;
+import java.lang.reflect.Type;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class GalleryFragment extends CardsFragment<GalleryPresenter> implements GalleryView {
@@ -63,7 +68,10 @@ public class GalleryFragment extends CardsFragment<GalleryPresenter> implements 
 
     @Override
     public void showProgress() {
-        progress.setVisibility(View.VISIBLE);
+        boolean isEmpty = recyclerView.getAdapter().getItemCount() == 0;
+        if (isEmpty) {
+            progress.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -78,8 +86,11 @@ public class GalleryFragment extends CardsFragment<GalleryPresenter> implements 
 
     @Override
     protected GalleryPresenter createPresenter() {
-        GetRemotePhotosCommand loader = new GetRemotePhotosCommand(NetworkUtils.getInstance());
-        PhotosLoadingUseCase loadingUseCase = new PhotosLoadingUseCase(ThreadExecutor.getInstance(), loader);
+        Type type = new TypeToken<List<Photo>>() {
+        }.getType();
+        ListLoadingUseCase<Photo> loadingUseCase =
+                new ListLoadingUseCase<>(ThreadExecutor.getInstance(), NetworkUtils.getInstance(),
+                        BuildConfig.PHOTOS_URL, type);
         GalleryPresenter presenter = new GalleryPresenter(this, loadingUseCase);
 
         return presenter;

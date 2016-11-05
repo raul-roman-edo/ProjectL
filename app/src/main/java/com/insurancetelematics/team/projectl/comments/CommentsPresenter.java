@@ -6,6 +6,7 @@ import com.insurancetelematics.team.projectl.comments.cards.comments.Comment;
 import com.insurancetelematics.team.projectl.core.AsyncAction;
 import com.insurancetelematics.team.projectl.core.AsyncActionListener;
 import com.insurancetelematics.team.projectl.core.BaseApiResponse;
+import com.insurancetelematics.team.projectl.core.ListLoadingUseCase;
 import com.insurancetelematics.team.projectl.core.NetworkCallbacksDispatcher;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,7 @@ public class CommentsPresenter implements CardsPresenter {
                 }
             };
 
-    public CommentsPresenter(CommentsView view, CommentsLoadingUseCase loadingUseCase) {
+    public CommentsPresenter(CommentsView view, ListLoadingUseCase loadingUseCase) {
         this.view = view;
         this.loadingUseCase = loadingUseCase;
     }

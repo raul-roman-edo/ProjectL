@@ -27,18 +27,27 @@ public class CommentHolder extends CardViewHolder<Comment> {
     private void showComment(Comment comment) {
         name.setText(comment.getName());
         message.setText(comment.getMessage());
-        Picasso.with(itemView.getContext())
-                .load(comment.getAvatarURL())
-                .resizeDimen(R.dimen.comment_avatar_size, R.dimen.comment_avatar_size)
-                .centerCrop()
-                .placeholder(R.drawable.default_photo)
-                .error(R.drawable.default_photo)
-                .into(avatar);
+        showAvatar(comment);
     }
 
     private void loadViews(View itemView) {
         avatar = (ImageView) itemView.findViewById(R.id.avatar);
         name = (TextView) itemView.findViewById(R.id.name);
         message = (TextView) itemView.findViewById(R.id.message);
+    }
+
+    private void showAvatar(Comment comment) {
+        boolean hasNoAvatar = comment.getAvatarURL().isEmpty();
+        if (hasNoAvatar) {
+            avatar.setImageResource(R.drawable.default_photo);
+        } else {
+            Picasso.with(itemView.getContext())
+                    .load(comment.getAvatarURL())
+                    .resizeDimen(R.dimen.comment_avatar_size, R.dimen.comment_avatar_size)
+                    .centerCrop()
+                    .placeholder(R.drawable.default_photo)
+                    .error(R.drawable.default_photo)
+                    .into(avatar);
+        }
     }
 }

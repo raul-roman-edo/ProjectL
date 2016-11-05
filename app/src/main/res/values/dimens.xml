@@ -2,4 +2,5 @@
 <resources>
         <dimen name="grid_item_size">512dp</dimen>
         <dimen name="comment_avatar_size">100dp</dimen>
+        <dimen name="card_margins">10dp</dimen>
 </resources>

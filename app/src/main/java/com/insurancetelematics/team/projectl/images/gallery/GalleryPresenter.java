@@ -5,6 +5,7 @@ import com.insurancetelematics.team.projectl.android.core.cards.CardsPresenter;
 import com.insurancetelematics.team.projectl.core.AsyncAction;
 import com.insurancetelematics.team.projectl.core.AsyncActionListener;
 import com.insurancetelematics.team.projectl.core.BaseApiResponse;
+import com.insurancetelematics.team.projectl.core.ListLoadingUseCase;
 import com.insurancetelematics.team.projectl.core.NetworkCallbacksDispatcher;
 import com.insurancetelematics.team.projectl.images.gallery.cards.photos.Photo;
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ public class GalleryPresenter implements CardsPresenter {
                 }
             };
 
-    public GalleryPresenter(GalleryView view, PhotosLoadingUseCase loadingUseCase) {
+    public GalleryPresenter(GalleryView view, ListLoadingUseCase<Photo> loadingUseCase) {
         this.view = view;
         this.loadingUseCase = loadingUseCase;
     }
